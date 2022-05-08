@@ -1,1 +1,1 @@
-# hello-world
+# My Coursera assignments
