@@ -1,9 +1,12 @@
 (function () {
 'use strict';
 
-angular.module('MyApp', [])
+angular.module('LunchCheck', [])
+.controller('LunchCheckController', LunchCheckController);
 
-.controller('MyController', function ($scope) {
+LunchCheckController.$inject = ['$scope'];
+
+function LunchCheckController($scope) {
   $scope.check = function () {
     var foods = $scope.foodinput;
     if (foods === "" || foods == null){
@@ -27,6 +30,6 @@ angular.module('MyApp', [])
     }
     }
   };
-});
+};
 
 })();
