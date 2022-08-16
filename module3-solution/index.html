@@ -3,7 +3,8 @@
   <head>
     <title>Narrow Down Your Menu Choice</title>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
 <body>
    <div class="container" ng-controller='NarrowItDownController as menu'>
@@ -13,7 +14,7 @@
       <input type="text" placeholder="search term" class="form-control" ng-model="menu.searchTerm">
     </div>
     <div class="form-group narrow-button">
-      <button class="btn btn-outline-primary" ng-click="menu.getItems();">Narrow It Down For Me!</button>
+      <button class="btn btn-primary" ng-click="menu.getItems();">Narrow It Down For Me!</button>
     </div>
 
     <!-- DDO FOUND ITEMS -->
