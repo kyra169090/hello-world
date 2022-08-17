@@ -66,7 +66,7 @@ function NarrowItDownController(MenuSearchService) {
     promise.then(function (response) {
       console.log(response);
       menu.found = response;
-      menu.setEmpty();
+      menu.isEmpty();
     })
     .catch(function (error) {
       alert("Something went wrong!");
@@ -77,9 +77,12 @@ function NarrowItDownController(MenuSearchService) {
     menu.found.splice(index, 1);
   };
 // when nothing is found with a matching word
-  menu.setEmpty = function () {
-            menu.isEmpty = !menu.found.length;
-        };
+  menu.isEmpty = function () {
+    if(menu.found.length > 0)
+      return false ;
+
+    return true ;
+  }
 }
 
 })();
