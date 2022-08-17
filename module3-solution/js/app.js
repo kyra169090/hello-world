@@ -75,7 +75,6 @@ function NarrowItDownController(MenuSearchService) {
 // function for the DDO
   menu.removeItem = function (index) {
     menu.found.splice(index, 1);
-    menu.setEmpty();
   };
 // when nothing is found with a matching word
   menu.setEmpty = function () {
